@@ -24,9 +24,10 @@ public class Main {
 
         // create new todo
         em.getTransaction().begin();
-        Todo todo = em.find(Todo.class, );
-        //em.persist(todo);
-        em.remove(todo);
+        Todo todo = new Todo();
+        todo.setSummary("This is a test");
+        todo.setDescription("This is a test");
+        em.persist(todo);
         em.getTransaction().commit();
 
         em.close();
